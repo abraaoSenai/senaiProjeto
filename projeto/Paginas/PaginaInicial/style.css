@@ -3,28 +3,27 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+
+    color: white;
+
 }
 
 body{
-    min-height: 200vh;
+    position: relative;
+    min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
     background: rgb(44, 43, 43);
-    display: flex;
-    align-items: center;
 
-    flex-direction: column;
-    position: relative;
+    
 }
 
 /* HEADER */
 
 header{
-    position: absolute;
-    top: 0;
     background-color: #2029AD;
-    width: 92%;
-    height: 6rem;
+    width: 92vw;
+    height: 5rem;
     padding: 0 2rem;
     
     border-radius: 50px 0;
@@ -37,16 +36,22 @@ header{
     justify-content: flex-start;
     align-items: center;
 
-    gap: 2rem;
+    margin: 0 50%;
+    margin-bottom: 3rem;
+
+
+    transform: translateX(-50%);
+
+    gap: 1rem;
 }
 
 .senaiLogo{
-    background-image: url(../../Assets/Imgs/senaiLogo.png);
+    background-image: url(../../Assets/Icons/senaiLogo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
-    height: 2rem;
+    height: 40%;
     width: 8rem;
     
     cursor: pointer;
@@ -74,32 +79,149 @@ header{
 }
 
 .pesquisarBtn{
-    height: 40px;
-    width: 40px;
-    background-color: white;
+    height: 40%;
+    width: 32px;
+    background-image: url(../../Assets/Icons/lupa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 5px;
+    background-color: rgba(44, 43, 43, 0.795);
+
+    cursor: pointer;
+}
+
+nav.header{
+    margin-left: 2rem;
+    height: 40%;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+
+    text-wrap: nowrap;
+}
+
+.loginArea{
+
+    /* background-color: white; */
+    
+    position: absolute;
+    right: 0px;
+
+    transform: translateX(-100%);
+
 }
 /* HEADER */
+
+/* CORPO DA PÁGINA */
+
+.cursosDestaquesContainer{
+
+    width: 92vw;
+    margin: 0 50%;
+    transform: translateX(-50%);
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 30vw);
+
+    grid-template-rows: 4rem 1fr 1fr;
+
+    gap: 1rem 1rem;
+
+    /* margin-bottom: 100px; */
+    
+}
+
+.imagemCurso{
+    width: 100%;
+    margin-bottom: 1rem;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.curso{
+    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.curso>h3, p{
+    margin-left: 1rem;
+}
+
+.curso> #preco{
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+    /* color: rgb(16, 31, 99); */
+
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.562);
+}
+
+.matriculaBtn{
+    
+    background-color:rgb(32, 41, 173) ;
+
+    display: inline-block;
+    height: 2.5rem;
+    width: 6rem;
+
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    
+    margin: 1rem 50%;
+    /* margin-top: 1rem; */
+    transform: translateX(-50%);   
+    
+    cursor: pointer;
+}
+
+/* rgb(16, 31, 99) */
+
+
+
+/* CORPO DA PÁGINA */
+
+
 
 
 
 
 /* FOOTER */
+.espacamentoContainer{
+    height: 10rem;
+}
+
 footer{
     position: absolute;
     bottom: 0;
     background-color: #2029AD;
     width: 100%;
     height: 4rem;
+    padding: 10px 0px;
     
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 10rem;
 }
 
-p{
-    width: 30%;
-    text-align: center;
-    font-size: small;
-}
+
 
 /* FOOTER */
