@@ -1,145 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-
-    color: white;
-
-}
-
-body{
-    position: relative;
-    min-height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    background: rgb(44, 43, 43);
-
-    
-}
-
-/* HEADER */
-
-header{
-    background-color: #2029AD;
-    width: 92vw;
-    height: 5rem;
-    padding: 0 2rem;
-    
-    border-radius: 50px 0;
-
-    border-bottom-left-radius: 50px;
-
-    display: flex;
-    flex-direction: row;
-
-    justify-content: flex-start;
-    align-items: center;
-
-    margin: 0 50%;
-    margin-bottom: 3rem;
-
-
-    transform: translateX(-50%);
-
-    gap: 1rem;
-
-    box-shadow: 1px 1px 10px black;
-}
-
-.senaiLogo{
-    background-image: url(../../Assets/Icons/senaiLogo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    height: 40%;
-    width: 8rem;
-    
-    cursor: pointer;
-}
-
-.linhaDivisoria{
-    height: 50%;
-    width: 10px;
-    /* background: red; */
-
-    position: relative;
-
-}
-
-.linhaDivisoria::after{
-    content: "";
-    height: 100%;
-    width: 4px;
-    border-radius: 2px;
-
-    position: absolute;
-    top: 0;
-    left:0;
-    background-color: rgb(255, 255, 255);
-}
-
-.pesquisarBtn{
-    height: 40%;
-    width: 32px;
-    background-image: url(../../Assets/Icons/lupa.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    border-radius: 5px;
-    background-color: rgba(44, 43, 43, 0.795);
-
-    cursor: pointer;
-}
-
-nav.header{
-    margin-left: 2rem;
-    height: 40%;
-
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 3rem;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-
-    text-wrap: nowrap;
-}
-
-.loginArea{
-
-    /* background-color: white; */
-    
-    position: absolute;
-    right: 0px;
-
-    transform: translateX(-100%);
-
-}
-/* HEADER */
 
 /* CORPO DA PÁGINA */
 
 .cursosDestaquesContainer{
 
-    width: 92vw;
+    width: 88vw;
     margin: 0 50%;
     transform: translateX(-50%);
 
     display: grid;
 
-    grid-template-columns: repeat(3, 30vw);
+    grid-template-columns: repeat(3,28vw);
 
     grid-template-rows: 4rem 1fr 1fr;
 
-    gap: 1rem 1rem;
+    gap: 1rem 2rem;
+
 
     /* margin-bottom: 100px; */
     
@@ -191,6 +66,28 @@ a{
     transform: translateX(-50%);   
     
     cursor: pointer;
+
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.matriculaBtn p{
+    display: inline-block;
+    text-align: center;
+
+    margin: 0;
+}
+
+.matriculaBtn:hover{
+    box-shadow: 1px 1px 10px black;
+    
+}
+
+.matriculaBtn>*{
+    transition: transform 0.2s ease-in-out;
+}
+
+.matriculaBtn:hover>*{
+    transform: scale(1.15);
 }
 
 /* rgb(16, 31, 99) */
@@ -202,28 +99,3 @@ a{
 
 
 
-
-
-/* FOOTER */
-.espacamentoContainer{
-    height: 10rem;
-}
-
-footer{
-    position: absolute;
-    bottom: 0;
-    background-color: #2029AD;
-    width: 100%;
-    height: 4rem;
-    padding: 10px 0px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 10rem;
-}
-
-
-
-/* FOOTER */
