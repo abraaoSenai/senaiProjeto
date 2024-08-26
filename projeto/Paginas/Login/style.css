@@ -66,11 +66,14 @@ input{
 
     align-self: center;
 }
-.cadastrarBtn:hover{
+.cadastrarBtn:hover {
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.404);
     
 }
-.cadastrarBtn:hover >*{
+.cadastrarBtn>p{
+    transition: transform 0.4s ease-in-out;
+}
+.cadastrarBtn:hover.cadastrarBtn>p{
     
     transform: scale(1.2);
 
