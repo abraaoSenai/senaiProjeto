@@ -180,6 +180,14 @@
         }
         /* HEADER */
 
+        /* CORPO */
+        .bodyContainer{
+            margin: 0 50%;
+            width: 80vw;
+            transform: translateX(-50%);
+        }
+
+        /* CORPO */
 
 
         /* FOOTER */
@@ -230,8 +238,39 @@
         </div>
 
     </header>
-    
 
+    <div class="bodyContainer">
+        <div class="cadastroContainer">
+            <p style="font-size: 1.5rem;">Faça login</p>
+    
+            <form action="" class="cadastroForm">
+
+                <div class="nameContainer formSon">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                
+                <div class="cpfContainer formSon">
+                    <label for="cpf">Cpf:</label>
+                    <input type="text" name="cpf" id="cpf">
+                </div>
+
+                <div class="emailContainer formSon">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email">
+                </div>
+
+                <div class="senhaContainer formSon">
+                    <label for="senha">Senha:</label>
+                    <input type="text" name="senha" id="senha">
+                </div>
+
+                <button id="" class="cadastrarBtn">Cadastrar</button>
+                
+            </form>
+        </div>
+    </div>
+    
 
 
 
