@@ -11,9 +11,9 @@
 
     grid-template-columns: repeat(3,30%);
 
-    grid-template-rows: 4rem auto auto;
+    grid-template-rows: repeat(3, auto);
 
-    gap: 3rem 3rem;
+    gap: 2rem 3rem;
 
 
     /* margin-bottom: 100px; */
@@ -30,14 +30,10 @@
     border-top-right-radius: 10px;
 
 }
-h2{
-    font-size: 2rem;
-}
 .curso{
     box-shadow: 2px 2px 20px rgb(0, 0, 0);
     border-radius: 10px;
 }
-
 .curso>h3, p{
     margin-left: 1rem;
 }
