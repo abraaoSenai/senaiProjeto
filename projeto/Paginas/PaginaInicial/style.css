@@ -70,6 +70,8 @@ h2{
     margin: 1rem 50%;
     /* margin-top: 1rem; */
     transform: translateX(-50%);   
+
+    text-decoration: none;
     
     cursor: pointer;
 
