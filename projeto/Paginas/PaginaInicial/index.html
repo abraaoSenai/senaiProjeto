@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
     <link rel="stylesheet" href="style.css">
-    <script src="s"></script>
+    
 
 
     <style>
@@ -29,6 +29,86 @@
 
             
         }
+
+
+@media (min-width: 700px){
+    nav.header{
+        margin-left: 2rem;
+    }
+}
+        
+@media (max-width: 600px) {
+            nav.header {
+                display: none !important;
+
+                
+            }
+
+
+
+}
+
+@media (min-width: 600px) {
+            nav.header2 {
+                display: none !important;
+            }
+
+            .menuBtn{
+                display: none !important;
+            }
+
+}
+
+@media (min-width: 1000px) {
+            nav.header {
+                width: 360px !important;
+}
+
+            }
+@media (max-width: 1000px) {
+            nav.header {
+                min-width: 40%;
+                
+            }
+
+}
+
+
+.ativado{
+    display: flex;
+}
+
+.desativado{
+    display: none !important;
+}
+
+.menuBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 40px;
+
+    gap: 26%;
+
+    box-shadow: 1px 1px 10px black;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.linha{
+    width: 80%;
+    height: 2px;
+    background-color: white;
+
+    border-radius: 2px;
+}
+
+
 
         /* HEADER */
         header{
@@ -53,9 +133,11 @@
 
             transform: translateX(-50%);
 
-            gap: 1rem;
+            gap: 16px;
 
             box-shadow: 1px 1px 10px black;
+
+            overflow: hidden;
         }
 
         .senaiLogo{
@@ -64,8 +146,8 @@
             background-repeat: no-repeat;
             background-position: center;
 
-            height: 40%;
-            width: 8rem;
+            min-height: 40%;
+            min-width: 8vw;
             
             cursor: pointer;
 
@@ -98,8 +180,8 @@
         }
 
         .pesquisarBtn{
-            height: 40%;
-            width: 32px;
+            height: 40px;
+            min-width: 40px;
             background-image: url(../../Assets/Icons/lupa.png);
             background-size: cover;
             background-repeat: no-repeat;
@@ -119,17 +201,34 @@
         }
 
         nav.header{
-            margin-left: 2rem;
+            
+            
             height: 40%;
-
+            
 
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 10px;
 
-            gap: 3rem;
+
+            overflow: hidden;
         }
 
+        nav.header2{
+            background-color: rgba(255, 255, 255, 0.808);
+            
+
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+        }
+        nav.header2 > *{
+            color: black !important;
+        }
         header a.f1{
             text-decoration: none;
             color: white;
@@ -220,6 +319,20 @@
             <a href="../FaleConosco/index.html" class="f1" id="faleConosco">Fale Conosco</a>
             
         </nav>
+        
+        <nav class="header2 desativado">
+            
+            <a href="../SobreNos/index.html" class="f1" id="sobreNos">Sobre nós</a>
+            <a href="../PaginaDeCursos/index.html" class="f1" id="cursos">Cursos</a>
+            <a href="../FaleConosco/index.html" class="f1" id="faleConosco">Fale Conosco</a>
+            
+        </nav>
+
+        <div class="menuBtn ">
+            <div class="linha" id="linha1"></div>
+            <div class="linha" id="linha2"></div>
+            <div class="linha" id="linha3"></div>
+        </div>
 
         <div class="loginArea">
 
@@ -360,7 +473,19 @@
     </footer>
 
 
-    <script src="script.js">
+    <script >
+        let menuBtn = document.querySelector(".menuBtn")
+        let navHeader2 = document.querySelector("nav.header2")
+
+
+
+
+        menuBtn.addEventListener("click", ()=>{
+            menuBtn.classList.toggle("desativado")
+            navHeader2.classList.toggle("ativado")
+            navHeader2.classList.toggle("desativado")
+            console.log("ahma")
+        })
     </script>
 </body>
 </html>
