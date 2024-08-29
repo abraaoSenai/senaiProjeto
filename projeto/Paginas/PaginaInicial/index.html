@@ -30,10 +30,23 @@
             
         }
 
+@media (min-width: 1000px) {
+            nav.header {
+                width: 360px !important;
+}
+
+            }
+@media (max-width: 1000px) {
+            nav.header {
+                min-width: 40%;
+                
+            }
+
+}
 
 @media (min-width: 700px){
     nav.header{
-        margin-left: 2rem;
+        margin-left: 20px;
     }
 }
         
@@ -59,27 +72,39 @@
 
 }
 
-@media (min-width: 1000px) {
-            nav.header {
-                width: 360px !important;
-}
-
+@media (max-width: 380px) {
+            .loginArea{
+                display: none !important;
             }
-@media (max-width: 1000px) {
-            nav.header {
-                min-width: 40%;
-                
+
+            .header2 *{
+                font-size: 0.8rem;
+
             }
 
 }
+
+
 
 
 .ativado{
-    display: flex;
+    display: flex !important;
 }
 
 .desativado{
     display: none !important;
+}
+
+.fechado{
+    width: 0px !important;
+    height: 0px !important;
+
+    transition: height 0.5s ease-in-out;
+}
+
+.aberto{
+    height: 140% !important;
+    width: 140px !important;
 }
 
 .menuBtn{
@@ -114,7 +139,7 @@
         header{
             background-color: #2029AD;
             width: 92vw;
-            height: 5rem;
+            height: 80px;
             padding: 0 2rem;
             
             border-radius: 50px 0;
@@ -133,21 +158,27 @@
 
             transform: translateX(-50%);
 
-            gap: 16px;
+            gap: 8px;
 
             box-shadow: 1px 1px 10px black;
 
-            overflow: hidden;
+            position: relative;
+
+            z-index: 2;
         }
 
         .senaiLogo{
             background-image: url(../../Assets/Icons/senaiLogo.png);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
 
-            min-height: 40%;
-            min-width: 8vw;
+            min-height: 40px;
+            min-width: 100px;
+
+            
+            
+            border-radius: 4px;
             
             cursor: pointer;
 
@@ -158,26 +189,9 @@
             box-shadow: 2px 2px 14px black;
         }
 
-        .linhaDivisoria{
-            height: 50%;
-            width: 10px;
-            /* background: red; */
 
-            position: relative;
 
-        }
 
-        .linhaDivisoria::after{
-            content: "";
-            height: 100%;
-            width: 4px;
-            border-radius: 2px;
-
-            position: absolute;
-            top: 0;
-            left:0;
-            background-color: rgb(255, 255, 255);
-        }
 
         .pesquisarBtn{
             height: 40px;
@@ -190,7 +204,6 @@
             /* background-color: rgba(44, 43, 43, 0.795); */
 
             cursor: pointer;
-
             box-shadow: 1px 1px 10px black;
 
             transition: transform 0.1s ease-in-out;
@@ -203,7 +216,7 @@
         nav.header{
             
             
-            height: 40%;
+            height: 40px;
             
 
             display: flex;
@@ -216,19 +229,77 @@
         }
 
         nav.header2{
-            background-color: rgba(255, 255, 255, 0.808);
+            background-color: white;
             
+            /* transform: translateY(50%); */
+            align-self: flex-start;
 
-            height: 100%;
+            height: 0;
+            width: 140px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 6px;
+            /* padding: 6px; */
+
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+            position: relative;
+            top: auto;
+            z-index: 3;
+
+            overflow: hidden;
+
+            box-shadow: 1px 1px 10px black;
+
+            cursor: pointer;
+
+            transition: 0.5s height ease-in-out;
+
+
         }
         nav.header2 > *{
             color: black !important;
+            background-color: #2029AD;
+            width: 100%;
+            text-align: center;
+            flex-grow: 1;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+            border-radius: 1px;
+            box-shadow: 0px 0px 1px black;
+
+            text-shadow: none !important;
+            
+
+            
         }
+
+        nav.header2 > a:active{
+            background-color: #434ab4;
+        }
+
+        .fecharBtn{
+            width: 100%;
+            height: 20px;
+            background-color: red !important;
+        }
+
+        .closeIcon{
+            height: 20px;
+            width: 20px;
+            background-image: url(../../Assets/Icons/close.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
         header a.f1{
             text-decoration: none;
             color: white;
@@ -306,7 +377,7 @@
 <body>
     <header>
         <a href="../PaginaInicial/index.html" class="senaiLogo"></a>
-        <div class="linhaDivisoria"></div>
+       
         
         <div class="pesquisarBtn">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -320,11 +391,16 @@
             
         </nav>
         
-        <nav class="header2 desativado">
+        <nav class="header2 fechado">
+
+            <div class="fecharBtn">
+                <div class="closeIcon"></div>
+            </div>
             
             <a href="../SobreNos/index.html" class="f1" id="sobreNos">Sobre nós</a>
             <a href="../PaginaDeCursos/index.html" class="f1" id="cursos">Cursos</a>
             <a href="../FaleConosco/index.html" class="f1" id="faleConosco">Fale Conosco</a>
+            <a href="../Login/index.html" class="f1" id="login">Login</a>
             
         </nav>
 
@@ -357,7 +433,7 @@
                 • 40 horas <br>
                 • Início em 26/08/2024 <br>
             </p>
-            <p id="preco">12x de 99999999,99 R$</p>
+            <p id="preco">12x de 423,99 R$</p>
 
             <a href="../Cursos/Automacao/index.html" class="matriculaBtn" id="automacao">
                 <p> Mátricula </p>
@@ -373,7 +449,7 @@
                 • 40 horas <br>
                 • Início em 26/08/2024 <br>
             </p>
-            <p id="preco">12x de 99999999,99 R$</p>
+            <p id="preco">12x de 201,99 R$</p>
 
             <a href="../Cursos/Eletrica/index.html" class="matriculaBtn" id="eletrica">
                 <p> Mátricula </p>
@@ -390,7 +466,7 @@
                 • Início em 26/08/2024 <br>
             </p>
 
-            <p id="preco">12x de 99999999,99 R$</p>
+            <p id="preco">12x de 445,99 R$</p>
 
             <a href="../Cursos/Enfermagem/index.html" class="matriculaBtn" id="enfermagem">
                 <p> Mátricula </p>
@@ -403,10 +479,10 @@
             <p>
                 • Cachoeiro de Itapemirim <br>
                 • Presencial <br>
-                • 40 horas <br>n
+                • 40 horas <br>
                 • Início em 26/08/2024 <br>
             </p>
-            <p id="preco">12x de 99999999,99 R$</p>
+            <p id="preco">12x de 423,99 R$</p>
 
             <a href="../Cursos/Automacao/index.html" class="matriculaBtn" id="automacao">
                 <p> Mátricula </p>
@@ -422,7 +498,7 @@
                 • 40 horas <br>
                 • Início em 26/08/2024 <br>
             </p>
-            <p id="preco">12x de 99999999,99 R$</p>
+            <p id="preco">12x de 201,99 R$</p>
 
             <a href="../Cursos/Eletrica/index.html" class="matriculaBtn" id="eletrica">
                 <p> Mátricula </p>
@@ -439,12 +515,16 @@
                 • Início em 26/08/2024 <br>
             </p>
 
-            <p id="preco">12x de 99999999,99 R$</p>
+            <p id="preco">12x de 445,99 R$</p>
 
             <a href="../Cursos/Enfermagem/index.html" class="matriculaBtn" id="enfermagem">
                 <p> Mátricula </p>
             </a>
         </div>
+
+        
+
+        
 
         
         
@@ -476,16 +556,24 @@
     <script >
         let menuBtn = document.querySelector(".menuBtn")
         let navHeader2 = document.querySelector("nav.header2")
-
+        let fecharBtn = document.querySelector(".fecharBtn")
 
 
 
         menuBtn.addEventListener("click", ()=>{
             menuBtn.classList.toggle("desativado")
-            navHeader2.classList.toggle("ativado")
-            navHeader2.classList.toggle("desativado")
+            navHeader2.classList.toggle("fechado")
+            navHeader2.classList.toggle("aberto")
             console.log("ahma")
         })
+
+        fecharBtn.addEventListener("click", ()=>{
+            menuBtn.classList.toggle("desativado")
+            navHeader2.classList.toggle("fechado")
+            navHeader2.classList.toggle("aberto")
+        })
+
+        
     </script>
 </body>
 </html>

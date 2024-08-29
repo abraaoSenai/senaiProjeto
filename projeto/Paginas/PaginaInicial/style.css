@@ -9,13 +9,13 @@
 
     display: grid;
 
-    grid-template-columns: repeat(3,30%);
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-rows: 4rem auto auto;
+    grid-template-rows: repeat(auto, 1fr);
 
-    gap: 3rem 3rem;
+    gap: 2rem 2rem;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
 
     /* margin-bottom: 100px; */
@@ -23,6 +23,43 @@
 
     
 }
+
+
+@media (max-width: 1000px) {
+    .cursosDestaquesContainer{
+        gap: 2rem 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .curso h3{
+        font-size: 1rem;
+    }
+
+    .curso p{
+        font-size: 0.7rem;
+    }
+
+    h2{
+        font-size: 	1.5rem !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .cursosDestaquesContainer{
+        gap: 1rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cursosDestaquesContainer{
+        gap: 2rem 2rem;
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 
 .imagemCurso{
     width: 100%;
@@ -32,16 +69,26 @@
     border-top-right-radius: 10px;
 
 }
+
 h2{
-    font-size: 2rem;
+    font-size: 1.6rem;
+    
 }
 .curso{
     box-shadow: 2px 2px 20px rgb(0, 0, 0);
     border-radius: 10px;
 }
 
-.curso>h3, p{
+.curso h3{
     margin-left: 1rem;
+
+    font-size: 1.1rem !important;
+}
+
+.curso h3, p{
+    margin-left: 1rem;
+
+    font-size: 0.8rem;
 }
 
 .curso> #preco{
