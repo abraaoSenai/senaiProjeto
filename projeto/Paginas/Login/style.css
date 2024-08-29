@@ -1,6 +1,9 @@
 @media (max-width :800px){
  .cadastroContainer{
-    width: 300px;
+    width: 400px !important;
+    height: 400px !important;
+
+    /* background-color: red; */
  }
 }
 
@@ -14,9 +17,29 @@
 
 @media (max-width :500px){
     .cadastrarBtn{
-        width: 50% !important;
+        width: 118px !important;
     }
 
+    .cadastroContainer{
+        width: 300px !important;
+        height: 300px !important;
+    
+        /* background-color: red; */
+     }
+    
+
+}
+
+@media (max-width :320px){
+    .cadastrarBtn{
+        width: 80px !important;
+    }
+
+    .titulo{
+
+    
+        font-size: 1.3rem !important;
+    }
 
 }
 
@@ -35,8 +58,8 @@
     margin: 0 50%;
     transform: translateX(-50%);
 
-    min-width: 40vw;
-    min-height: 40vw;
+    width: 520px;
+    height: 520px;
 
     border-radius: 10px;
 
@@ -53,12 +76,31 @@
     justify-content: center;
     align-items: flex-start;
 
+    height: 100%;
     width: 100%;
 
     gap: 2rem;
 
     /* background-color: purple; */
 }
+
+@media (max-width: 500px){
+    .cadastroForm{
+        gap: 1rem;
+    }
+
+    input{
+        width: 100% !important;
+    }
+}
+@media (max-width: 400px){
+    .cadastroContainer{
+        width: 70vw !important;
+    }
+
+
+}
+
 .formSon{
     display: flex;
     width: 100%;
@@ -69,6 +111,8 @@ label{
     justify-content: center;
     align-items: center;
     min-width: 20%;
+
+    margin-right: 6px;
 }
 input{
     height: 1.5rem;

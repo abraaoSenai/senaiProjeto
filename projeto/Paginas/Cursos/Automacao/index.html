@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Automação</title>
+    <title>Página inicial</title>
     <link rel="stylesheet" href="style.css">
-
+    
 
 
     <style>
@@ -30,11 +30,116 @@
             
         }
 
+@media (min-width: 1000px) {
+            nav.header {
+                width: 360px !important;
+}
+
+            }
+@media (max-width: 1000px) {
+            nav.header {
+                min-width: 40%;
+                
+            }
+
+}
+
+@media (min-width: 700px){
+    nav.header{
+        margin-left: 20px;
+    }
+}
+        
+@media (max-width: 600px) {
+            nav.header {
+                display: none !important;
+
+                
+            }
+
+
+
+}
+
+@media (min-width: 600px) {
+            nav.header2 {
+                display: none !important;
+            }
+
+            .menuBtn{
+                display: none !important;
+            }
+
+}
+
+@media (max-width: 380px) {
+            .loginArea{
+                display: none !important;
+            }
+
+            .header2 *{
+                font-size: 0.8rem;
+
+            }
+
+}
+
+
+
+
+.ativado{
+    display: flex !important;
+}
+
+.desativado{
+    display: none !important;
+}
+
+.fechado{
+    width: 0px !important;
+    height: 0px !important;
+
+    transition: height 0.5s ease-in-out;
+}
+
+.aberto{
+    height: 140% !important;
+    width: 140px !important;
+}
+
+.menuBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 40px;
+
+    gap: 26%;
+
+    box-shadow: 1px 1px 10px black;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.linha{
+    width: 80%;
+    height: 2px;
+    background-color: white;
+
+    border-radius: 2px;
+}
+
+
+
         /* HEADER */
         header{
             background-color: #2029AD;
             width: 92vw;
-            height: 5rem;
+            height: 80px;
             padding: 0 2rem;
             
             border-radius: 50px 0;
@@ -53,19 +158,27 @@
 
             transform: translateX(-50%);
 
-            gap: 1rem;
+            gap: 8px;
 
             box-shadow: 1px 1px 10px black;
+
+            position: relative;
+
+            z-index: 2;
         }
 
         .senaiLogo{
             background-image: url(../../../Assets/Icons/senaiLogo.png);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
 
-            height: 40%;
-            width: 8rem;
+            min-height: 40px;
+            min-width: 100px;
+
+            
+            
+            border-radius: 4px;
             
             cursor: pointer;
 
@@ -76,30 +189,13 @@
             box-shadow: 2px 2px 14px black;
         }
 
-        .linhaDivisoria{
-            height: 50%;
-            width: 10px;
-            /* background: red; */
 
-            position: relative;
 
-        }
 
-        .linhaDivisoria::after{
-            content: "";
-            height: 100%;
-            width: 4px;
-            border-radius: 2px;
-
-            position: absolute;
-            top: 0;
-            left:0;
-            background-color: rgb(255, 255, 255);
-        }
 
         .pesquisarBtn{
-            height: 40%;
-            width: 32px;
+            height: 40px;
+            min-width: 40px;
             background-image: url(../../../Assets/Icons/lupa.png);
             background-size: cover;
             background-repeat: no-repeat;
@@ -108,7 +204,6 @@
             /* background-color: rgba(44, 43, 43, 0.795); */
 
             cursor: pointer;
-
             box-shadow: 1px 1px 10px black;
 
             transition: transform 0.1s ease-in-out;
@@ -119,15 +214,90 @@
         }
 
         nav.header{
-            margin-left: 2rem;
-            height: 40%;
-
+            
+            
+            height: 40px;
+            
 
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 10px;
 
-            gap: 3rem;
+
+            overflow: hidden;
+        }
+
+        nav.header2{
+            background-color: white;
+            
+            /* transform: translateY(50%); */
+            align-self: flex-start;
+
+            height: 0;
+            width: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* padding: 6px; */
+
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+            position: relative;
+            top: auto;
+            z-index: 3;
+
+            overflow: hidden;
+
+            box-shadow: 1px 1px 10px black;
+
+            cursor: pointer;
+
+            transition: 0.5s height ease-in-out;
+
+
+        }
+        nav.header2 > *{
+            color: black !important;
+            background-color: #2029AD;
+            width: 100%;
+            text-align: center;
+            flex-grow: 1;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+            border-radius: 1px;
+            box-shadow: 0px 0px 1px black;
+
+            text-shadow: none !important;
+            
+
+            
+        }
+
+        nav.header2 > a:active{
+            background-color: #434ab4;
+        }
+
+        .fecharBtn{
+            width: 100%;
+            height: 20px;
+            background-color: red !important;
+        }
+
+        .closeIcon{
+            height: 20px;
+            width: 20px;
+            background-image: url(../../../Assets/Icons/close.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         header a.f1{
@@ -207,7 +377,7 @@
 <body>
     <header>
         <a href="../../PaginaInicial/index.html" class="senaiLogo"></a>
-        <div class="linhaDivisoria"></div>
+       
         
         <div class="pesquisarBtn">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -220,6 +390,25 @@
             <a href="../../FaleConosco/index.html" class="f1" id="faleConosco">Fale Conosco</a>
             
         </nav>
+        
+        <nav class="header2 fechado">
+
+            <div class="fecharBtn">
+                <div class="closeIcon"></div>
+            </div>
+            
+            <a href="../../SobreNos/index.html" class="f1" id="sobreNos">Sobre nós</a>
+            <a href="../../PaginaDeCursos/index.html" class="f1" id="cursos">Cursos</a>
+            <a href="../../FaleConosco/index.html" class="f1" id="faleConosco">Fale Conosco</a>
+            <a href="../../Login/index.html" class="f1" id="login">Login</a>
+            
+        </nav>
+
+        <div class="menuBtn ">
+            <div class="linha" id="linha1"></div>
+            <div class="linha" id="linha2"></div>
+            <div class="linha" id="linha3"></div>
+        </div>
 
         <div class="loginArea">
 
@@ -231,6 +420,8 @@
 
     </header>
     
+
+
     <div class="mainContainer">
         <h2>Curso de Automação</h2> <br>
 
@@ -291,8 +482,6 @@
     </div>
 
 
-
-
     
 
 
@@ -314,7 +503,40 @@
 
 
     <script >
+        let menuBtn = document.querySelector(".menuBtn")
+        let navHeader2 = document.querySelector("nav.header2")
+        let fecharBtn = document.querySelector(".fecharBtn")
 
+
+
+        menuBtn.addEventListener("click", ()=>{
+            menuBtn.classList.toggle("desativado")
+            navHeader2.classList.toggle("fechado")
+            navHeader2.classList.toggle("aberto")
+            console.log("ahma")
+        })
+
+        fecharBtn.addEventListener("click", ()=>{
+            menuBtn.classList.toggle("desativado")
+            navHeader2.classList.toggle("fechado")
+            navHeader2.classList.toggle("aberto")
+        })
+
+        
     </script>
 </body>
 </html>
+
+
+
+    
+    
+
+
+
+
+    
+
+
+
+    
